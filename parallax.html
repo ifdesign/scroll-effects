@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parallax Scrolling Example</title>
+	<style>
+
+		HTML,BODY
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		BODY
+		{
+			font-family: Georgia, Times, serif;
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		H1,H2,H3,H4,H5,H6
+		{
+			font-family: Arial, sans-serif;
+		}
+
+		H1
+		{
+			margin: 0px;
+			padding: 40px 10%;
+			color: #fff;
+			background: #222;
+		}
+
+		H2
+		{ font-size: 250%; }
+
+		P
+		{
+			padding: 40px;
+			border: 1px solid lightgray;
+			background: rgba(255,255,255, .4);
+			border-radius: 10px;
+		}
+
+		.block
+		{
+			width: 100%;
+			border-bottom: 1px solid gray;
+		}
+
+		.block > SECTION
+		{
+			margin: 0px auto;
+			padding: 80px 0px;
+			width: 80%;
+		}
+
+		.parallax
+		{
+			position: relative;
+			overflow: hidden;
+		}
+
+		.parallax.image H2,
+		.parallax.background H2
+		{ color: white; }
+
+		.parallaxed
+		{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			z-index: -1;
+		}
+
+		.parallax.background .parallaxed
+		{
+			height: 300%;
+			background-size: cover;
+			background-position: top center;
+			background-repeat: no-repeat;
+		}
+
+		.parallax.text .parallaxed
+		{
+			position: absolute;
+			left: 20%;
+			bottom: 0px;
+			width: auto;
+			height: auto;
+			opacity: .5;
+		}
+
+		.parallax.text H1
+		{
+			margin: 30px 0px 0px;
+			padding: 20px;
+			font-size: 100px;
+			line-height: 120px;
+			color: lightgreen;
+			background: none;
+		}
+
+		.parallaxed IMG
+		{
+			height: 100%;
+			width: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>ICR Parallax demo</h1>
+
+	<div class="block">
+		<section>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id lectus
+				auctor, laoreet ante non, blandit magna. Aenean molestie dolor urna, id viverra
+				diam dictum ac. Nulla facilisi. Maecenas sit amet facilisis ante. Pellentesque
+				dignissim sed nibh sit amet iaculis. Sed convallis laoreet lorem eu euismod.
+				Pellentesque sagittis, neque in blandit consectetur, leo nisl luctus nisi, vel
+				volutpat neque lacus vel risus. Nam et tellus sed erat aliquam bibendum a in
+				massa. Vivamus consequat dui nec neque feugiat molestie. Quisque eu leo at dui
+				sodales bibendum. Nullam eget velit quis enim lobortis ultrices vel facilisis
+				nibh.
+			</p>
+		</section>
+	</div>
+
+	<div class="block parallax background">
+		<section>
+			<h2>Parallax as background</h2>
+			<p>
+				Phasellus viverra nibh sed mi iaculis lacinia. Nullam quis risus
+				tellus. Cras condimentum eleifend augue, a pellentesque tellus fermentum in.
+				Fusce laoreet nulla vel enim mattis, ut molestie augue fringilla. Vestibulum
+				lobortis eros velit, nec porttitor lorem tempus nec. Aliquam rutrum, tortor in
+				elementum mollis, arcu ante consequat nunc, at dapibus velit ligula sed arcu.
+				Proin euismod odio sed augue sagittis, sodales sollicitudin risus facilisis.
+				Fusce lorem ante, volutpat et ligula nec, sodales aliquam turpis.
+			</p>
+		</section>
+		<div class="parallaxed" style="background-image:url(http://cmster.com/media/EvfNBrA5nBLCLOk8NBha22UJlz1KjBPSqSiedOrMpBoiSVg1TnYZpQ5MbWlL1yUl.jpg);">
+		</div>
+	</div>
+
+	<div class="block parallax background">
+		<section>
+			<h2>Parallax as background</h2>
+			<p>
+				Phasellus viverra nibh sed mi iaculis lacinia. Nullam quis risus
+				tellus. Cras condimentum eleifend augue, a pellentesque tellus fermentum in.
+				Fusce laoreet nulla vel enim mattis, ut molestie augue fringilla. Vestibulum
+				lobortis eros velit, nec porttitor lorem tempus nec. Aliquam rutrum, tortor in
+				elementum mollis, arcu ante consequat nunc, at dapibus velit ligula sed arcu.
+				Proin euismod odio sed augue sagittis, sodales sollicitudin risus facilisis.
+				Fusce lorem ante, volutpat et ligula nec, sodales aliquam turpis.
+			</p>
+		</section>
+		<div class="parallaxed" style="background-image:url(http://cmster.com/media/EvfNBrA5nBLCLOk8NBha22UJlz1KjBPSqSiedOrMpBoiSVg1TnYZpQ5MbWlL1yUl.jpg);">
+		</div>
+	</div>
+
+	<div class="block parallax background">
+		<section>
+			<h2>Parallax as background</h2>
+			<p>
+				Phasellus viverra nibh sed mi iaculis lacinia. Nullam quis risus
+				tellus. Cras condimentum eleifend augue, a pellentesque tellus fermentum in.
+				Fusce laoreet nulla vel enim mattis, ut molestie augue fringilla. Vestibulum
+				lobortis eros velit, nec porttitor lorem tempus nec. Aliquam rutrum, tortor in
+				elementum mollis, arcu ante consequat nunc, at dapibus velit ligula sed arcu.
+				Proin euismod odio sed augue sagittis, sodales sollicitudin risus facilisis.
+				Fusce lorem ante, volutpat et ligula nec, sodales aliquam turpis.
+			</p>
+		</section>
+		<div class="parallaxed" style="background-image:url(http://cmster.com/media/EvfNBrA5nBLCLOk8NBha22UJlz1KjBPSqSiedOrMpBoiSVg1TnYZpQ5MbWlL1yUl.jpg);">
+		</div>
+	</div>
+
+	<div class="block parallax text">
+		<section>
+			<h2>Parallax as text</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id lectus
+				auctor, laoreet ante non, blandit magna. Aenean molestie dolor urna, id viverra
+				diam dictum ac. Nulla facilisi. Maecenas sit amet facilisis ante. Pellentesque
+				dignissim sed nibh sit amet iaculis. Sed convallis laoreet lorem eu euismod.
+				Pellentesque sagittis, neque in blandit consectetur, leo nisl luctus nisi, vel
+				volutpat neque lacus vel risus. Nam et tellus sed erat aliquam bibendum a in
+				massa. Vivamus consequat dui nec neque feugiat molestie. Quisque eu leo at dui
+				sodales bibendum. Nullam eget velit quis enim lobortis ultrices vel facilisis
+				nibh.
+			</p>
+		</section>
+		<h1 class="parallaxed">parallax</h1>
+	</div>
+
+	<div class="block parallax image">
+		<section>
+			<h2>Parallax as image</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id lectus
+				auctor, laoreet ante non, blandit magna. Aenean molestie dolor urna, id viverra
+				diam dictum ac. Nulla facilisi. Maecenas sit amet facilisis ante. Pellentesque
+				dignissim sed nibh sit amet iaculis. Sed convallis laoreet lorem eu euismod.
+				Pellentesque sagittis, neque in blandit consectetur, leo nisl luctus nisi, vel
+				volutpat neque lacus vel risus. Nam et tellus sed erat aliquam bibendum a in
+				massa. Vivamus consequat dui nec neque feugiat molestie. Quisque eu leo at dui
+				sodales bibendum. Nullam eget velit quis enim lobortis ultrices vel facilisis
+				nibh.
+			</p>
+		</section>
+		<div class="parallaxed">
+			<img src="http://www.hdwallpapers.in/walls/green_bubbles-wide.jpg">
+		</div>
+	</div>
+
+	<div class="block parallax image">
+		<section>
+			<h2>Parallax as image</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id lectus
+				auctor, laoreet ante non, blandit magna. Aenean molestie dolor urna, id viverra
+				diam dictum ac. Nulla facilisi. Maecenas sit amet facilisis ante. Pellentesque
+				dignissim sed nibh sit amet iaculis. Sed convallis laoreet lorem eu euismod.
+				Pellentesque sagittis, neque in blandit consectetur, leo nisl luctus nisi, vel
+				volutpat neque lacus vel risus. Nam et tellus sed erat aliquam bibendum a in
+				massa. Vivamus consequat dui nec neque feugiat molestie. Quisque eu leo at dui
+				sodales bibendum. Nullam eget velit quis enim lobortis ultrices vel facilisis
+				nibh.
+			</p>
+		</section>
+		<div class="parallaxed">
+			<img src="http://www.hdwallpapers.in/walls/green_bubbles-wide.jpg">
+		</div>
+	</div>
+
+	<div class="block">
+		<section>
+			<h2>No parallax</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id lectus
+				auctor, laoreet ante non, blandit magna. Aenean molestie dolor urna, id viverra
+				diam dictum ac. Nulla facilisi. Maecenas sit amet facilisis ante. Pellentesque
+				dignissim sed nibh sit amet iaculis. Sed convallis laoreet lorem eu euismod.
+				Pellentesque sagittis, neque in blandit consectetur, leo nisl luctus nisi, vel
+				volutpat neque lacus vel risus. Nam et tellus sed erat aliquam bibendum a in
+				massa. Vivamus consequat dui nec neque feugiat molestie. Quisque eu leo at dui
+				sodales bibendum. Nullam eget velit quis enim lobortis ultrices vel facilisis
+				nibh.
+			</p>
+		</section>
+	</div>
+
+	<script src="icr.utils.js"/></script>
+	<script src="icr.utils.viewport.js"/></script>
+	<script src="icr.scroller.js"/></script>
+	<script src="icr.parallax.js"/></script>
+	<script>
+		icr.parallax.applyTo(document.querySelector('.parallax.text'), '.parallaxed', 3, true);
+		icr.parallax.applyTo(document.querySelector('.parallax.image'), '.parallaxed', 2);
+		icr.parallax.applyTo(document.querySelectorAll('.parallax.background')[0], '.parallaxed', 8);
+		icr.parallax.applyTo(document.querySelectorAll('.parallax.background')[1], '.parallaxed', 3);
+		icr.parallax.applyTo(document.querySelector('.parallax.background'), '.parallaxed', 7);
+		icr.parallax.applyTo(document.querySelectorAll('.parallax'), '.parallaxed', 4);
+		icr.parallax.registerInScroller();
+		icr.scroller.init();
+		icr.scroller.start();
+	</script>
+
+</body>
+</html>
